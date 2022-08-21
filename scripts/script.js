@@ -1,37 +1,20 @@
+import { Router } from "./router.js";
+const router = new Router();
+
 const ancoras = document.querySelectorAll('a');
 
-const routes = {
-  '/': '/pages/home.html',
-  '/universe': '/pages/universe.html',
-  '/exploration': '/pages/exploration.html',
-  404: '/pages/notfound.js'
-}
-
-ancoras.forEach(ancora => {
+ancoras.forEach((ancora) => {
   ancora.addEventListener('click', (event) => {
-    route(event);
+    router.route(event);
   })
 })
 
-function route(event) {
-  event = event || window.event;
-  event.preventDefault();
+router.add('/', '/pages/home.html');
+router.add('/universe', '/pages/universe.html');
+router.add('/exploration', '/pages/exploration.html');
+router.add(404, '/pages/notfound.html');
 
-  window.history.pushState({}, '', event.target.href);
-  handle();  
-}
+// router.handle();
 
-function handle() {
-  const { pathname } = window.location;
-  const route = routes[pathname] || routes[404];
-  console.log(route)
-
-  fetch(route)
-  .then(data => data.text())
-  .then(html => {
-    root.innerHTML = html;
-  })
-}
-
-window.onpopstate = () => route();
-
+window.onpopstate = () => router.route();
+window.route = () => router.route();
