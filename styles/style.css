@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  list-style: none;
+}
+html, body, #root {
+  width: 100;
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+
+  background-image: url('../assets/images/mountains-universe-1.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+
+nav {
+  position: absolute;
+  top: 4rem;
+  left: 7.2rem;
+
+  display: flex;
+  gap: 3.227rem;
+}
+nav ul {
+  display: flex;
+  gap: 5.367rem;
+}
+nav ul li {
+  display: grid;
+  place-items: center;
+}
+
+
+a {
+  color: #C4C4CC;
+  font-size: 2.167rem;
+  line-height: 2.167rem;
+
+  transition: all .3s;
+}
+a:hover, a:focus {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+
+section {
+  color: #E1E1E6;
+  width: 100%;
+  height: 100%;
+
+  padding-left: 10.2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section h1 {
+  font-size: 4.8rem;
+  line-height: 6rem;
+}
+
+section p {
+  font-size: 1.8rem;
+  line-height: 2.88rem;
+
+  margin-top: 1.6rem;
+  max-width: 64.8rem;
+}
+
+section button {
+  color: #FFFFFF;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  border: .2rem solid #FFFFFF;
+  border-radius: 0.5rem;
+  
+  background: none;
+  
+  margin-top: 2.4rem;
+  padding: 1.2rem 3.2rem;
+  
+  cursor: pointer;
+  transition: all .3s;
+}
+section button:hover {
+  background-color: #FFFFFF;
+  color: #02799D;
+  box-shadow: 0 0 0.5rem #fff;
+}
+
+
+section.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url('../assets/images/mountains-universe-1.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+
+section.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+section.description h1 {
+  margin-top: 18.5rem;
+}
+
+section.description.universe {
+  background-image: url('../assets/images/mountains-universe-2.webp');
+}
+section.description.exploration {
+  background-image: url('../assets/images/mountains-universe-3.webp');
+}
