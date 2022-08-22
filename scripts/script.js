@@ -16,5 +16,5 @@ router.add(404, '/pages/notfound.html');
 
 // router.handle();
 
-window.onpopstate = () => router.route();
+window.onpopstate = () => router.handle();
 window.route = () => router.route();
