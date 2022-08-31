@@ -1,8 +1,4 @@
-SPA Universe:
-- Conceitos de SPA;
-- Mapeamento de rotas;
-- Assíncrono e promises;
-- Orientação a objetos;
-- Classes e muito mais.
+# Projetos do Stage 6
 
-Acesse em: <a href='https://spa-universe-mu.vercel.app/'>SPA Universe</a>
+- SPA universe
+- GitFav
